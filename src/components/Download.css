@@ -1,0 +1,250 @@
+.download {
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(10, 10, 31, 0.5) 0%, rgba(26, 10, 46, 0.5) 100%);
+}
+
+.download-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.download-content {
+  max-width: 600px;
+}
+
+.download-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.download-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: #a78bfa;
+  margin-bottom: 1.5rem;
+}
+
+.download-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.btn-download.primary {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  color: #fff;
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
+.btn-download.secondary {
+  background: rgba(139, 92, 246, 0.1);
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-download svg {
+  width: 24px;
+  height: 24px;
+}
+
+.download-note {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+.download-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.phone-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.phone-device {
+  width: 320px;
+  height: 700px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(139, 92, 246, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  margin: 0 auto;
+}
+
+.phone-device::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 28px;
+  background: #000;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.placeholder-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: rgba(139, 92, 246, 0.5);
+}
+
+.placeholder-image p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+@media (max-width: 1024px) {
+  .download-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .download-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .download-image {
+    min-height: 500px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .download {
+    padding: 5rem 1.5rem;
+  }
+
+  .download-container {
+    gap: 2rem;
+  }
+
+  .download-title {
+    font-size: 2rem;
+  }
+
+  .download-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .download-description {
+    font-size: 0.95rem;
+  }
+
+  .download-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .phone-device {
+    width: 280px;
+    height: 600px;
+  }
+
+  .download-image {
+    min-height: 400px;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .download {
+    padding: 4rem 1rem;
+  }
+
+  .phone-device {
+    width: 260px;
+    height: 560px;
+  }
+}
+
+/* Disable right-click and selection on videos */
+.phone-video {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
