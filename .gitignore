@@ -1,65 +1,14 @@
-# Dependencies
-node_modules
-/.pnp
-.pnp.js
+# Ignore everything by default
+/*
 
-# Testing
-/coverage
+# Allow only src and public folders
+!src/
+!public/
+!.gitignore
+!README.md
+!package.json
+!.env.example
 
-# Production
-/build
-
-# Misc
-.DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Firebase
-.firebase
-.firebaserc
-firebase-debug.log
-firebase-debug.*.log
-
-# Backend
-backend/node_modules
-backend/.env
-backend/.wrangler
-backend/dist
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-*~
-
-# OS
-Thumbs.db
-
-# Documentation (keep only README.md)
-ARCHITECTURE.md
-DEPLOYMENT_CHECKLIST.md
-DEPLOYMENT_COMMANDS.md
-DEPLOYMENT_STEPS.md
-DOCUMENTATION_INDEX.md
-FINAL_SUMMARY.md
-FIREBASE_DEPLOYMENT.md
-IMPLEMENTATION_SUMMARY.md
-OPENROUTER_SETUP.md
-QUICK_REFERENCE.md
-QUICK_START.md
-READY_TO_DEPLOY.md
-SECURITY_CHECKLIST.md
-SETUP_GUIDE.md
-START_HERE.md
-SYSTEM_FLOW.md
-TROUBLESHOOTING.md
-backend/README.md
+# Recursively allow files in src and public
+!src/**
+!public/**
